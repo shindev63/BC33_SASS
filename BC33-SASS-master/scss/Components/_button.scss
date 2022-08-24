@@ -1,0 +1,50 @@
+@import '../Helpers/variables';
+
+
+button {
+    background-color: $text-c1-ponk;
+    padding: 8px 12px; 
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  button i{
+      color: $text-c1-light;
+      transition: all 0.2s;
+  }
+  
+  button span{
+      color: $text-c1-light;
+      transition: all 0.2s;
+  }
+  
+  button::before {
+    content: "";
+    
+    background-color: $bg-c1-light;  
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 30px;
+    border: 1px solid $text-c1-ponk;
+    transition: transform 0.2s ease-in-out;
+  
+    transform: scale(0);
+  }
+  button:hover i{
+      color: $text-c1-ponk;
+  }
+  
+  button:hover span{
+      color: $text-c1-ponk;
+  }
+  button:hover::before,
+  button:focus::before {       
+    transform: scale(1);
+  }

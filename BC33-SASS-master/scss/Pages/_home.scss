@@ -1,0 +1,64 @@
+@import '../Helpers/variables';
+
+.row__card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+}
+
+.row__card{
+    @media only screen and (max-width: 765px) {
+          grid-template-columns: 1fr;
+    }
+}
+
+section.card{
+    position: relative;
+    z-index: -2;
+}
+
+@import '../Helpers/variables';
+
+
+.col{
+
+    @for $i from 0 to 8 {
+        .item-#{$i + 1}{
+          animation: CardBienHinh (0.5s * $i+1) linear};
+    }
+
+}
+
+.card-title{
+    color: $text-c1-ponk;
+}
+
+section#home{
+    position: relative;
+    z-index: 100;
+}
+
+.violet_bottom{
+    position: absolute;
+    z-index: -1;
+    bottom: -60px;
+    left: 0;
+    @media only screen and (max-width: 765px) {
+       bottom: -52px;
+  }
+}
+
+@keyframes CardBienHinh {
+    0%{
+        opacity: -1;
+        
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        
+        opacity: 1;
+    }
+}

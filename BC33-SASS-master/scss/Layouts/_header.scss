@@ -1,0 +1,44 @@
+@import '../Helpers/variables';
+
+header{
+    position: relative;
+    z-index: 2;
+}
+.yellow_top{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+header{
+
+
+    .nav-link {
+        .nav-title{
+            @include text($fz:$text-base, $fw:$text-semibolt, $c:$text-c1-dark);
+            transition: all 0.1s;
+            &:hover{
+                color: #B21980;
+            }
+        }
+
+
+       
+    }
+
+    .fa-brands{
+        @media only screen and (max-width: 765px) {
+           display: none;
+      }
+    }
+
+}
+.fabaco{
+    transition: all 0.5s;
+    @include fa($text-c1-dark, $text-c1-ponk);
+}
+
+.fabo{
+    transition: all 0.5s;
+    @include fa($text-c1-light, $text-c1-dark);
+}

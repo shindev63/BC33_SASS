@@ -1,0 +1,22 @@
+.wave-white{
+    position: absolute;
+    z-index: -1;
+    bottom: -1px;
+    left: 0;
+    @media only screen and (max-width: 765px) {
+        bottom: -2px;
+   }
+}
+section.contact{
+    position: relative;
+    z-index: -2;
+}
+.accent_bottom{
+    position: absolute;
+    z-index: -1;
+    bottom: -48px;
+    left: 0;
+    @media only screen and (max-width: 765px) {
+        bottom: -48px;
+   }
+}
